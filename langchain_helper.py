@@ -15,9 +15,10 @@ from langchain.agents.openai_functions_agent.base import (
 from langchain.memory import ConversationBufferMemory
 from langchain.schema import SystemMessage
 from langchain.agents import AgentExecutor
+import config
 
 def answer(dset, query):
-    llm = ChatOpenAI(model="gpt-3.5-turbo-0613", openai_api_key="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")
+    llm = ChatOpenAI(model="gpt-3.5-turbo-0613", openai_api_key=config.key)
     memory = ConversationBufferMemory(memory_key="chat_history")
     dataset = {'df': pd.read_csv(dset)}
     tools = [PythonAstREPLTool(locals=dataset)]
