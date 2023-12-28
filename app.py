@@ -19,7 +19,7 @@ def analytics():
         return "Thank you for providing the dataset location! Please let me know what insights you want!"
     else:
         query = request.form['query']
-        return answer(datasetLoc, query)
+        return answer(datasetLoc, "from the dataset " + datasetLoc + "" + query)
 
 if __name__ == "__main__":
     app.run()
