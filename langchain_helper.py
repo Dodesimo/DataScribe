@@ -19,7 +19,7 @@ from langchain.agents import AgentExecutor
 def answer(dset, query):
     llm = ChatOpenAI(model="gpt-3.5-turbo-0613", openai_api_key=os.environ.get("OPENAI_API_KEY"))
     memory = ConversationBufferMemory(memory_key="chat_history")
-    dataset = {'df': pd.read_csv(dset)}
+    dataset = {'df': pd.read_csv(dset, on_bad_lines='skip')}
     tools = [PythonAstREPLTool(locals=dataset)]
     tool_names = [tool.name for tool in tools]
     prompt = OpenAIFunctionsAgent.create_prompt(system_message=SystemMessage(
