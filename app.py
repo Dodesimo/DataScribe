@@ -7,6 +7,10 @@ datasetLoc = ""
 
 @app.route("/")
 def main():
+    return render_template('main.html')
+
+@app.route("/chat")
+def chat():
     return render_template('chat.html')
 
 @app.route("/get", methods=["GET", "POST"])
