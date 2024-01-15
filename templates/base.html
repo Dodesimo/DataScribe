@@ -9,7 +9,7 @@
       margin: 0;
     }
 
-    ul {
+    .list {
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -17,19 +17,16 @@
       background-color: rgba(0, 0, 0, 0.41);
     }
 
-    li {
-      float: left;
-    }
-
-    li a {
+    .topelements {
       display: block;
       color: white;
       text-align: center;
       padding: 25px 16px;
       text-decoration: none;
+        float:left;
     }
 
-    li a:hover {
+    .topelements:hover {
       background-color: rgba(0, 0, 0, 0.41);
     }
   </style>
@@ -45,12 +42,10 @@
 <body>
 
 <!-- Navigation bar -->
-<ul>
-    <li><a href="{{ url_for('main') }}"><b>DataScribe</b></a></li>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#services">Services</a></li>
-  <li><a href="#contact">Contact</a></li>
+<ul class="list">
+    <li class="topelements"><a href="{{ url_for('main') }}"><b>DataScribe</b></a></li>
+  <li class="topelements"><a href="{{ url_for('chat') }}">ChatInsights</a></li>
+  <li class="topelements"><a href="#about">CSVSum</a></li>
 </ul>
 
 <!-- Content block that can be overridden in child pages -->
