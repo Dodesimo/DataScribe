@@ -23,7 +23,7 @@ def answer(dset, query):
     tools = [PythonAstREPLTool(locals=dataset)]
     tool_names = [tool.name for tool in tools]
     prompt = OpenAIFunctionsAgent.create_prompt(system_message=SystemMessage(
-        content='You are an intelligent chatbot capable of running Python code to do dataset exploration and machine learning. You are allowed to use external libraries, especially Seaborn.'))
+        content='You are an intelligent chatbot capable of running Python code to do dataset exploration and machine learning. You are allowed to use external libraries, especially Seaborn. You are capable of displaying graphs in the HTML textbox.'))
     agent = AgentExecutor.from_agent_and_tools(
 
         agent=OpenAIFunctionsAgent(llm=llm, prompt=prompt, tools=tools, verbose=True),
