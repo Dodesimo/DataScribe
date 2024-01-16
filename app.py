@@ -25,9 +25,12 @@ def analytics():
         query = request.form['query']
         return answer(datasetLoc, "from the dataset " + datasetLoc + "" + query)
 
-@app.route("/graphgen")
+@app.route("/graphgen", methods=["GET","POST"])
 def graphgen():
-    return render_template("graphgen.html")
+    if request.method == "POST":
+        return render_template("graphgen.html")
+    else:
+        return render_template("graphgen.html")
 
 if __name__ == "__main__":
     app.run()
