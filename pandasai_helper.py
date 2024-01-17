@@ -15,6 +15,6 @@ def generateGraph(link, query):
 
 
 def getImagePath():
-    files = glob.glob(os.path.abspath('static/exports/charts/*'))
+    files = glob.glob('exports/charts/*')
     latest_file = max(files, key=os.path.getctime)
-    return latest_file[1:]
+    return latest_file

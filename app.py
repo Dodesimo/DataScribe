@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from langchain_helper import answer
 from pandasai_helper import generateGraph, getImagePath
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='exports')
 count = 0
 datasetLoc = ""
 
