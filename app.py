@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from langchain_helper import answer
+from pandasai_helper import generateGraph, getImagePath
 
 app = Flask(__name__)
 count = 0
@@ -28,7 +29,11 @@ def analytics():
 @app.route("/graphgen", methods=["GET","POST"])
 def graphgen():
     if request.method == "POST":
-        return render_template("graphgen.html")
+        link = request.form.get("datasetLink")
+        query = request.form.get("query")
+        generateGraph(link, query)
+        filePath = getImagePath()
+        return render_template("graphgensuccess.html", path=filePath)
     else:
         return render_template("graphgen.html")
 

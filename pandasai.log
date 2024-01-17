@@ -1,0 +1,659 @@
+2024-01-16 19:06:04 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:06:04 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:06:04 [INFO] Prompt ID: 1ef47f91-16f0-4d04-b307-3acc0e613c80
+2024-01-16 19:06:04 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:06:04 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:06:04 [INFO] Using prompt: <dataframe>
+dfs[0]:323766x67
+iso_code,continent,location,date,total_cases,new_cases,new_cases_smoothed,total_deaths,new_deaths,new_deaths_smoothed,total_cases_per_million,new_cases_per_million,new_cases_smoothed_per_million,total_deaths_per_million,new_deaths_per_million,new_deaths_smoothed_per_million,reproduction_rate,icu_patients,icu_patients_per_million,hosp_patients,hosp_patients_per_million,weekly_icu_admissions,weekly_icu_admissions_per_million,weekly_hosp_admissions,weekly_hosp_admissions_per_million,total_tests,new_tests,total_tests_per_thousand,new_tests_per_thousand,new_tests_smoothed,new_tests_smoothed_per_thousand,positive_rate,tests_per_case,tests_units,total_vaccinations,people_vaccinated,people_fully_vaccinated,total_boosters,new_vaccinations,new_vaccinations_smoothed,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,total_boosters_per_hundred,new_vaccinations_smoothed_per_million,new_people_vaccinated_smoothed,new_people_vaccinated_smoothed_per_hundred,stringency_index,population_density,median_age,aged_65_older,aged_70_older,gdp_per_capita,extreme_poverty,cardiovasc_death_rate,diabetes_prevalence,female_smokers,male_smokers,handwashing_facilities,hospital_beds_per_thousand,life_expectancy,human_development_index,population,excess_mortality_cumulative_absolute,excess_mortality_cumulative,excess_mortality,excess_mortality_cumulative_per_million
+AFG,Asia,Afghanistan,2020-01-04,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-03,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-05,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: Plot the first two quantitiatve quanitities in the graph
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2024-01-16 19:06:04 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:06:15 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-16 19:06:15 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+
+# Plot the first two quantitative quantities
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+
+plt.show()
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+result = {"type": "plot", "value": "temp_chart.png"}
+            ```
+            
+2024-01-16 19:06:15 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:06:15 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:06:15 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:06:15 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:06:15 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:06:15 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:06:15 [INFO] Executed in: 11.202003955841064s
+2024-01-16 19:06:15 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:06:16 [ERROR] Exception on /graphgen [POST]
+Traceback (most recent call last):
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/devam/PycharmProjects/DataScribe/app.py", line 35, in graphgen
+    filePath = getImagePath()
+  File "/Users/devam/PycharmProjects/DataScribe/pandasai_helper.py", line 18, in getImagePath
+    maxFile = max(files, key=os.path.getctime)
+ValueError: max() arg is an empty sequence
+2024-01-16 19:06:16 [INFO] 127.0.0.1 - - [16/Jan/2024 19:06:16] "[35m[1mPOST /graphgen HTTP/1.1[0m" 500 -
+2024-01-16 19:07:42 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:07:42 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:07:42 [INFO] Prompt ID: cafaa961-97cf-47d9-b153-78b7ff4902cf
+2024-01-16 19:07:42 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:07:42 [INFO] Using cached response
+2024-01-16 19:07:42 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:07:42 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:07:42 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:07:42 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:07:42 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:07:42 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:07:42 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:07:42 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:07:42 [INFO] Executed in: 0.6557977199554443s
+2024-01-16 19:07:42 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:07:43 [ERROR] Exception on /graphgen [POST]
+Traceback (most recent call last):
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/devam/PycharmProjects/DataScribe/app.py", line 35, in graphgen
+    filePath = getImagePath()
+  File "/Users/devam/PycharmProjects/DataScribe/pandasai_helper.py", line 18, in getImagePath
+    maxFile = max(files, key=os.path.getctime)
+ValueError: max() arg is an empty sequence
+2024-01-16 19:07:43 [INFO] 127.0.0.1 - - [16/Jan/2024 19:07:43] "[35m[1mPOST /graphgen HTTP/1.1[0m" 500 -
+2024-01-16 19:11:05 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:11:06 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:11:06 [INFO] Prompt ID: 91b98fab-1905-43c9-9cf6-ae293880a2ae
+2024-01-16 19:11:06 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:11:06 [INFO] Using cached response
+2024-01-16 19:11:06 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:11:06 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:11:06 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:11:06 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:11:06 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:11:06 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:11:06 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:11:06 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:11:06 [INFO] Executed in: 0.669647216796875s
+2024-01-16 19:11:06 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:11:06 [ERROR] Exception on /graphgen [POST]
+Traceback (most recent call last):
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/devam/PycharmProjects/DataScribe/app.py", line 35, in graphgen
+    filePath = getImagePath()
+  File "/Users/devam/PycharmProjects/DataScribe/pandasai_helper.py", line 20, in getImagePath
+    maxFile = max(files, key=os.path.getctime)
+ValueError: max() arg is an empty sequence
+2024-01-16 19:11:06 [INFO] 127.0.0.1 - - [16/Jan/2024 19:11:06] "[35m[1mPOST /graphgen HTTP/1.1[0m" 500 -
+2024-01-16 19:40:57 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:40:57 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:40:57 [INFO] Prompt ID: d5ef7abc-dd78-42db-afe6-20cdbd1a6735
+2024-01-16 19:40:57 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:40:57 [INFO] Using cached response
+2024-01-16 19:40:57 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:40:57 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:40:57 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:40:57 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:40:57 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:40:57 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:40:58 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:40:58 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:40:58 [INFO] Executed in: 0.658919095993042s
+2024-01-16 19:40:58 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:40:58 [INFO] 127.0.0.1 - - [16/Jan/2024 19:40:58] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 19:40:58 [INFO] 127.0.0.1 - - [16/Jan/2024 19:40:58] "[33mGET /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png HTTP/1.1[0m" 404 -
+2024-01-16 19:40:58 [INFO] 127.0.0.1 - - [16/Jan/2024 19:40:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 19:44:51 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:44:51 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:44:51 [INFO] Prompt ID: a239c0d6-4f55-4b3c-bb8b-745191e8c5d6
+2024-01-16 19:44:51 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:44:51 [INFO] Using cached response
+2024-01-16 19:44:51 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:44:51 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:44:51 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:44:51 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:44:51 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:44:51 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:44:52 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:44:52 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:44:52 [INFO] Executed in: 0.6439392566680908s
+2024-01-16 19:44:52 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:44:53 [INFO] 127.0.0.1 - - [16/Jan/2024 19:44:53] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 19:44:53 [INFO] 127.0.0.1 - - [16/Jan/2024 19:44:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 19:47:45 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:47:45 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:47:45 [INFO] Prompt ID: 40e4d119-ca51-4743-a2d5-bd2ffc5ff67e
+2024-01-16 19:47:46 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:47:46 [INFO] Using cached response
+2024-01-16 19:47:46 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:47:46 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:47:46 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:47:46 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:47:46 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:47:46 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:47:46 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:47:46 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:47:46 [INFO] Executed in: 0.7278921604156494s
+2024-01-16 19:47:46 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:47:47 [INFO] 127.0.0.1 - - [16/Jan/2024 19:47:47] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 19:47:47 [INFO] 127.0.0.1 - - [16/Jan/2024 19:47:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 19:56:14 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:56:14 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:56:14 [INFO] Prompt ID: 552125e7-016d-46ca-8a3d-6af53cd60652
+2024-01-16 19:56:14 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:56:14 [INFO] Using cached response
+2024-01-16 19:56:14 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:56:14 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:56:14 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:56:14 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:56:14 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:56:14 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:56:15 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:56:15 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:56:15 [INFO] Executed in: 0.6599936485290527s
+2024-01-16 19:56:15 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:56:16 [INFO] 127.0.0.1 - - [16/Jan/2024 19:56:16] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 19:56:16 [INFO] 127.0.0.1 - - [16/Jan/2024 19:56:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 19:57:45 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 19:57:45 [INFO] Running PandasAI with openai LLM...
+2024-01-16 19:57:45 [INFO] Prompt ID: 3145bca8-a0f9-4693-8760-d172b232cf38
+2024-01-16 19:57:45 [INFO] Executing Step 0: CacheLookup
+2024-01-16 19:57:45 [INFO] Using cached response
+2024-01-16 19:57:45 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 19:57:45 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 19:57:45 [INFO] Executing Step 3: CachePopulation
+2024-01-16 19:57:45 [INFO] Executing Step 4: CodeExecution
+2024-01-16 19:57:45 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 19:57:45 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 19:57:45 [INFO] Executing Step 5: ResultValidation
+2024-01-16 19:57:45 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 19:57:45 [INFO] Executed in: 0.6291158199310303s
+2024-01-16 19:57:45 [INFO] Executing Step 6: ResultParsing
+2024-01-16 19:57:47 [INFO] 127.0.0.1 - - [16/Jan/2024 19:57:47] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 19:57:47 [INFO] 127.0.0.1 - - [16/Jan/2024 19:57:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:01:27 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:01:27 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:01:27 [INFO] Prompt ID: 40b9f761-414e-44b2-ad4a-9c93d811309e
+2024-01-16 20:01:27 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:01:27 [INFO] Using cached response
+2024-01-16 20:01:27 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:01:27 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:01:27 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:01:27 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:01:27 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:01:27 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:01:27 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:01:27 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:01:27 [INFO] Executed in: 0.6926090717315674s
+2024-01-16 20:01:27 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:01:29 [INFO] 127.0.0.1 - - [16/Jan/2024 20:01:29] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:01:29 [INFO] 127.0.0.1 - - [16/Jan/2024 20:01:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:03:11 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:03:11 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:03:11 [INFO] Prompt ID: bd2dfc2e-23f6-45c6-b046-6a8bd04caac6
+2024-01-16 20:03:11 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:03:11 [INFO] Using cached response
+2024-01-16 20:03:11 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:03:11 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:03:11 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:03:11 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:03:11 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:03:11 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:03:11 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:03:11 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:03:11 [INFO] Executed in: 0.6665868759155273s
+2024-01-16 20:03:11 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:03:13 [INFO] 127.0.0.1 - - [16/Jan/2024 20:03:13] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:03:13 [INFO] 127.0.0.1 - - [16/Jan/2024 20:03:13] "[33mGET /uveRBWt.png HTTP/1.1[0m" 404 -
+2024-01-16 20:03:13 [INFO] 127.0.0.1 - - [16/Jan/2024 20:03:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:09:29 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:09:30 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:09:30 [INFO] Prompt ID: df9a6112-ba72-46ae-b7b7-114251a3a1c4
+2024-01-16 20:09:30 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:09:30 [INFO] Using cached response
+2024-01-16 20:09:30 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:09:30 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:09:30 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:09:30 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:09:30 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:09:30 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:09:30 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:09:30 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:09:30 [INFO] Executed in: 0.687777042388916s
+2024-01-16 20:09:30 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:09:30 [INFO] 127.0.0.1 - - [16/Jan/2024 20:09:30] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:09:31 [INFO] 127.0.0.1 - - [16/Jan/2024 20:09:31] "[33mGET /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png HTTP/1.1[0m" 404 -
+2024-01-16 20:09:31 [INFO] 127.0.0.1 - - [16/Jan/2024 20:09:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:10:15 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:10:15 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:10:15 [INFO] Prompt ID: 2fb7ff61-d906-4d24-9606-9ea671f5b741
+2024-01-16 20:10:15 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:10:15 [INFO] Using cached response
+2024-01-16 20:10:15 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:10:15 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:10:15 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:10:15 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:10:15 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:10:15 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:10:15 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:10:15 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:10:15 [INFO] Executed in: 0.671083927154541s
+2024-01-16 20:10:15 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:10:16 [INFO] 127.0.0.1 - - [16/Jan/2024 20:10:16] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:10:16 [INFO] 127.0.0.1 - - [16/Jan/2024 20:10:16] "[33mGET /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png HTTP/1.1[0m" 404 -
+2024-01-16 20:10:16 [INFO] 127.0.0.1 - - [16/Jan/2024 20:10:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:12:31 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:12:31 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:12:31 [INFO] Prompt ID: 90de8dfb-2e9c-48d7-b944-c882a2d9c5a1
+2024-01-16 20:12:31 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:12:31 [INFO] Using cached response
+2024-01-16 20:12:31 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:12:31 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:12:31 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:12:31 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:12:31 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:12:31 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:12:31 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:12:31 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:12:31 [INFO] Executed in: 0.6618807315826416s
+2024-01-16 20:12:31 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:12:32 [INFO] 127.0.0.1 - - [16/Jan/2024 20:12:32] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:12:32 [INFO] 127.0.0.1 - - [16/Jan/2024 20:12:32] "[33mGET /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png HTTP/1.1[0m" 404 -
+2024-01-16 20:12:32 [INFO] 127.0.0.1 - - [16/Jan/2024 20:12:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:13:56 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:13:56 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:13:56 [INFO] Prompt ID: 5ae48d88-38af-4249-bcf9-21d0e1d01ca5
+2024-01-16 20:13:56 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:13:56 [INFO] Using cached response
+2024-01-16 20:13:56 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:13:56 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:13:56 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:13:56 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:13:56 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:13:56 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:13:57 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:13:57 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:13:57 [INFO] Executed in: 0.648228645324707s
+2024-01-16 20:13:57 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:13:57 [INFO] 127.0.0.1 - - [16/Jan/2024 20:13:57] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:13:57 [INFO] 127.0.0.1 - - [16/Jan/2024 20:13:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:16:39 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:16:39 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:16:39 [INFO] Prompt ID: cb4b03c8-6535-4865-a081-dfea742205e6
+2024-01-16 20:16:39 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:16:39 [INFO] Using cached response
+2024-01-16 20:16:39 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:16:39 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:16:39 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:16:39 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:16:39 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:16:39 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:16:40 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2024-01-16 20:16:40 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/pipelines/smart_datalake_chat/code_execution.py", line 52, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/helpers/query_exec_tracker.py", line 134, in execute_func
+    step_data = self._generate_exec_step(tag, result)
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/helpers/query_exec_tracker.py", line 183, in _generate_exec_step
+    self._response = self._format_response(result)
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/helpers/query_exec_tracker.py", line 202, in _format_response
+    with open(result["value"], "rb") as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'
+. Retrying
+2024-01-16 20:16:40 [INFO] Using prompt: <dataframe>
+dfs[0]:323766x67
+iso_code,continent,location,date,total_cases,new_cases,new_cases_smoothed,total_deaths,new_deaths,new_deaths_smoothed,total_cases_per_million,new_cases_per_million,new_cases_smoothed_per_million,total_deaths_per_million,new_deaths_per_million,new_deaths_smoothed_per_million,reproduction_rate,icu_patients,icu_patients_per_million,hosp_patients,hosp_patients_per_million,weekly_icu_admissions,weekly_icu_admissions_per_million,weekly_hosp_admissions,weekly_hosp_admissions_per_million,total_tests,new_tests,total_tests_per_thousand,new_tests_per_thousand,new_tests_smoothed,new_tests_smoothed_per_thousand,positive_rate,tests_per_case,tests_units,total_vaccinations,people_vaccinated,people_fully_vaccinated,total_boosters,new_vaccinations,new_vaccinations_smoothed,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,total_boosters_per_hundred,new_vaccinations_smoothed_per_million,new_people_vaccinated_smoothed,new_people_vaccinated_smoothed_per_hundred,stringency_index,population_density,median_age,aged_65_older,aged_70_older,gdp_per_capita,extreme_poverty,cardiovasc_death_rate,diabetes_prevalence,female_smokers,male_smokers,handwashing_facilities,hospital_beds_per_thousand,life_expectancy,human_development_index,population,excess_mortality_cumulative_absolute,excess_mortality_cumulative,excess_mortality,excess_mortality_cumulative_per_million
+AFG,Asia,Afghanistan,2020-01-05,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-04,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-03,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+</dataframe>
+
+The user asked the following question:
+Q: Plot the first two quantitiatve quanitities in the graph
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+
+# Plot the first two quantitative quantities
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+
+plt.show()
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+result = {"type": "plot", "value": "temp_chart.png"}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/pipelines/smart_datalake_chat/code_execution.py", line 52, in execute
+    result = pipeline_context.query_exec_tracker.execute_func(
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/helpers/query_exec_tracker.py", line 134, in execute_func
+    step_data = self._generate_exec_step(tag, result)
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/helpers/query_exec_tracker.py", line 183, in _generate_exec_step
+    self._response = self._format_response(result)
+  File "/Users/devam/PycharmProjects/DataScribe/venv/lib/python3.10/site-packages/pandasai/helpers/query_exec_tracker.py", line 202, in _format_response
+    with open(result["value"], "rb") as image_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'
+
+
+Fix the python code above and return the new python code:
+2024-01-16 20:16:56 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-16 20:16:56 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:16:56 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+result
+        ```
+2024-01-16 20:16:57 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:16:57 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:16:57 [INFO] Executed in: 17.84105086326599s
+2024-01-16 20:16:57 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:16:57 [INFO] 127.0.0.1 - - [16/Jan/2024 20:16:57] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:16:57 [INFO] 127.0.0.1 - - [16/Jan/2024 20:16:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:17:48 [INFO] Question: Plot the first two quantitiatve quanitities in the graph
+2024-01-16 20:17:48 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:17:48 [INFO] Prompt ID: fe67e4cb-bc2c-4816-8d1f-9657deaf16ea
+2024-01-16 20:17:48 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:17:49 [INFO] Using cached response
+2024-01-16 20:17:49 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:17:49 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:17:49 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:17:49 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:17:49 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:17:49 [INFO] 
+Code running:
+```
+df = dfs[0]
+df['date'] = pd.to_datetime(df['date'])
+plt.plot(df['date'], df['total_cases'], label='Total Cases')
+plt.plot(df['date'], df['new_cases'], label='New Cases')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.title('COVID-19 Cases Over Time')
+plt.legend()
+plt.show()
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:17:49 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:17:49 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:17:49 [INFO] Executed in: 0.6785709857940674s
+2024-01-16 20:17:49 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:17:49 [INFO] 127.0.0.1 - - [16/Jan/2024 20:17:49] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:17:49 [INFO] 127.0.0.1 - - [16/Jan/2024 20:17:49] "[33mGET /Users/devam/PycharmProjects/DataScribe/static/exports/charts/temp_chart.png HTTP/1.1[0m" 404 -
+2024-01-16 20:17:49 [INFO] 127.0.0.1 - - [16/Jan/2024 20:17:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
