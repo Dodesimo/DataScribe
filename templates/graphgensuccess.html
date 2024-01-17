@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataScribe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
+
+    <style>
+
+  </style>
+
+</head>
+<body>
+
+{% block content %}
+<p></p>
+    <h1 class="homehead">GraphGen</h1>
+<p></p>
+    <h4 class="homesub"><i>Generate high-quality Pythonic graphs in a sentence.</i></h4>
+    <form action="{{ url_for('graphgen')}}" method="post">
+            <label for="text-field" class="formclass">What is the link to your dataset?</label><br>
+        <textarea id="text-field" name="datasetLink" required class="formclass input-box" style="color: black; text-align-all: left"></textarea>
+            <p></p>
+            <label for="text-field" class="formclass">What do you want to plot?</label><br>
+        <textarea id="text-field" name="query" required class="formclass input-box" style="color: black; text-align-all: left"></textarea>
+            <p></p>
+            <button type="submit" class="formclass" style="color: black">Generate your graph!</button>
+            <p></p>
+    </form>
+    <p></p>
+        <p class="hometext">Graph: </p>
+    <img src="{{ path }}" alt="{{ path }}" class="graph">
+{% endblock %}
+</body>
+</html>
