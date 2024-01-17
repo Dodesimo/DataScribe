@@ -1241,3 +1241,636 @@ result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/expo
 2024-01-16 20:53:57 [INFO] 127.0.0.1 - - [16/Jan/2024 20:53:57] "POST /graphgen HTTP/1.1" 200 -
 2024-01-16 20:53:57 [INFO] 127.0.0.1 - - [16/Jan/2024 20:53:57] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
 2024-01-16 20:53:57 [INFO] 127.0.0.1 - - [16/Jan/2024 20:53:57] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 20:55:47 [INFO] Question: please graph continent and total deaths
+2024-01-16 20:55:47 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:55:47 [INFO] Prompt ID: c47ba14e-55a4-4e79-89d6-8f44140aa905
+2024-01-16 20:55:47 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:55:47 [INFO] Using cached response
+2024-01-16 20:55:47 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:55:47 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:55:47 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:55:47 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:55:47 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:55:47 [INFO] 
+Code running:
+```
+df = dfs[0]
+df = df[['continent', 'total_deaths']].groupby('continent').sum().reset_index()
+plt.figure(figsize=(10, 6))
+plt.bar(df['continent'], df['total_deaths'])
+plt.xlabel('Continent')
+plt.ylabel('Total Deaths')
+plt.title('Total Deaths by Continent')
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:55:47 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:55:47 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:55:47 [INFO] Executed in: 0.5250177383422852s
+2024-01-16 20:55:47 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:55:47 [INFO] 127.0.0.1 - - [16/Jan/2024 20:55:47] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:55:47 [INFO] 127.0.0.1 - - [16/Jan/2024 20:55:47] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:55:47 [INFO] 127.0.0.1 - - [16/Jan/2024 20:55:47] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 20:58:20 [INFO] Question: please graph continent and total deaths
+2024-01-16 20:58:20 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:58:20 [INFO] Prompt ID: a8b08c5e-cd5b-47cb-899c-ca05ee1fcf0e
+2024-01-16 20:58:20 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:58:20 [INFO] Using cached response
+2024-01-16 20:58:20 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:58:20 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:58:20 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:58:20 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:58:20 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:58:20 [INFO] 
+Code running:
+```
+df = dfs[0]
+df = df[['continent', 'total_deaths']].groupby('continent').sum().reset_index()
+plt.figure(figsize=(10, 6))
+plt.bar(df['continent'], df['total_deaths'])
+plt.xlabel('Continent')
+plt.ylabel('Total Deaths')
+plt.title('Total Deaths by Continent')
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:58:21 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:58:21 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:58:21 [INFO] Executed in: 0.5246579647064209s
+2024-01-16 20:58:21 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:58:21 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:21] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:58:21 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:21] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:58:21 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:21] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 20:58:33 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:33] "GET / HTTP/1.1" 200 -
+2024-01-16 20:58:33 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:33] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:58:35 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:35] "GET /graphgen HTTP/1.1" 200 -
+2024-01-16 20:58:35 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:35] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 20:58:45 [INFO] Question: plot vaccination rates versus continent
+2024-01-16 20:58:45 [INFO] Running PandasAI with openai LLM...
+2024-01-16 20:58:45 [INFO] Prompt ID: fe407443-597e-490f-a9f3-d4bcdad81ad5
+2024-01-16 20:58:46 [INFO] Executing Step 0: CacheLookup
+2024-01-16 20:58:46 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 20:58:46 [INFO] Using prompt: <dataframe>
+dfs[0]:323766x67
+iso_code,continent,location,date,total_cases,new_cases,new_cases_smoothed,total_deaths,new_deaths,new_deaths_smoothed,total_cases_per_million,new_cases_per_million,new_cases_smoothed_per_million,total_deaths_per_million,new_deaths_per_million,new_deaths_smoothed_per_million,reproduction_rate,icu_patients,icu_patients_per_million,hosp_patients,hosp_patients_per_million,weekly_icu_admissions,weekly_icu_admissions_per_million,weekly_hosp_admissions,weekly_hosp_admissions_per_million,total_tests,new_tests,total_tests_per_thousand,new_tests_per_thousand,new_tests_smoothed,new_tests_smoothed_per_thousand,positive_rate,tests_per_case,tests_units,total_vaccinations,people_vaccinated,people_fully_vaccinated,total_boosters,new_vaccinations,new_vaccinations_smoothed,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,total_boosters_per_hundred,new_vaccinations_smoothed_per_million,new_people_vaccinated_smoothed,new_people_vaccinated_smoothed_per_hundred,stringency_index,population_density,median_age,aged_65_older,aged_70_older,gdp_per_capita,extreme_poverty,cardiovasc_death_rate,diabetes_prevalence,female_smokers,male_smokers,handwashing_facilities,hospital_beds_per_thousand,life_expectancy,human_development_index,population,excess_mortality_cumulative_absolute,excess_mortality_cumulative,excess_mortality,excess_mortality_cumulative_per_million
+AFG,Asia,Afghanistan,2020-01-04,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-05,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-03,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: plot vaccination rates versus continent
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2024-01-16 20:58:46 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 20:58:55 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-16 20:58:55 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+vaccination_rates = []
+continents = []
+
+for df in dfs:
+    continent = df['continent'].iloc[0]
+    total_vaccinations = df['total_vaccinations'].max()
+    population = df['population'].iloc[0]
+    vaccination_rate = (total_vaccinations / population) * 100
+    vaccination_rates.append(vaccination_rate)
+    continents.append(continent)
+
+df_vaccination_rates = pd.DataFrame({'continent': continents, 'vaccination_rate': vaccination_rates})
+
+plt.figure(figsize=(10, 6))
+plt.bar(df_vaccination_rates['continent'], df_vaccination_rates['vaccination_rate'])
+plt.xlabel('Continent')
+plt.ylabel('Vaccination Rate (%)')
+plt.title('Vaccination Rates by Continent')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('vaccination_rates.png')
+
+# Declare result var
+result = {
+    "type": "plot",
+    "value": "vaccination_rates.png"
+}
+            ```
+            
+2024-01-16 20:58:55 [INFO] Executing Step 3: CachePopulation
+2024-01-16 20:58:55 [INFO] Executing Step 4: CodeExecution
+2024-01-16 20:58:55 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 20:58:55 [INFO] 
+Code running:
+```
+vaccination_rates = []
+continents = []
+for df in dfs:
+    continent = df['continent'].iloc[0]
+    total_vaccinations = df['total_vaccinations'].max()
+    population = df['population'].iloc[0]
+    vaccination_rate = total_vaccinations / population * 100
+    vaccination_rates.append(vaccination_rate)
+    continents.append(continent)
+df_vaccination_rates = pd.DataFrame({'continent': continents, 'vaccination_rate': vaccination_rates})
+plt.figure(figsize=(10, 6))
+plt.bar(df_vaccination_rates['continent'], df_vaccination_rates['vaccination_rate'])
+plt.xlabel('Continent')
+plt.ylabel('Vaccination Rate (%)')
+plt.title('Vaccination Rates by Continent')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 20:58:55 [INFO] Executing Step 5: ResultValidation
+2024-01-16 20:58:55 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 20:58:55 [INFO] Executed in: 9.577877044677734s
+2024-01-16 20:58:55 [INFO] Executing Step 6: ResultParsing
+2024-01-16 20:58:55 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:55] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 20:58:55 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:55] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 20:58:55 [INFO] 127.0.0.1 - - [16/Jan/2024 20:58:55] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 21:00:44 [INFO] Question: plot vaccination rates versus continent
+2024-01-16 21:00:44 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:00:44 [INFO] Prompt ID: 93b83873-efca-4481-8757-fded2184f2d6
+2024-01-16 21:00:44 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:00:44 [INFO] Using cached response
+2024-01-16 21:00:44 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:00:44 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:00:44 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:00:44 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:00:44 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:00:44 [INFO] 
+Code running:
+```
+vaccination_rates = []
+continents = []
+for df in dfs:
+    continent = df['continent'].iloc[0]
+    total_vaccinations = df['total_vaccinations'].max()
+    population = df['population'].iloc[0]
+    vaccination_rate = total_vaccinations / population * 100
+    vaccination_rates.append(vaccination_rate)
+    continents.append(continent)
+df_vaccination_rates = pd.DataFrame({'continent': continents, 'vaccination_rate': vaccination_rates})
+plt.figure(figsize=(10, 6))
+plt.bar(df_vaccination_rates['continent'], df_vaccination_rates['vaccination_rate'])
+plt.xlabel('Continent')
+plt.ylabel('Vaccination Rate (%)')
+plt.title('Vaccination Rates by Continent')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:00:44 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:00:44 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:00:44 [INFO] Executed in: 0.5187060832977295s
+2024-01-16 21:00:44 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:00:45 [INFO] 127.0.0.1 - - [16/Jan/2024 21:00:45] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:00:45 [INFO] 127.0.0.1 - - [16/Jan/2024 21:00:45] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 21:00:45 [INFO] 127.0.0.1 - - [16/Jan/2024 21:00:45] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 21:05:49 [INFO] Question: plot vaccination rates versus dates
+2024-01-16 21:05:49 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:05:49 [INFO] Prompt ID: 7c38079f-3124-48ea-99ee-3c8388348ef0
+2024-01-16 21:05:49 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:05:49 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:05:49 [INFO] Using prompt: <dataframe>
+dfs[0]:323766x67
+iso_code,continent,location,date,total_cases,new_cases,new_cases_smoothed,total_deaths,new_deaths,new_deaths_smoothed,total_cases_per_million,new_cases_per_million,new_cases_smoothed_per_million,total_deaths_per_million,new_deaths_per_million,new_deaths_smoothed_per_million,reproduction_rate,icu_patients,icu_patients_per_million,hosp_patients,hosp_patients_per_million,weekly_icu_admissions,weekly_icu_admissions_per_million,weekly_hosp_admissions,weekly_hosp_admissions_per_million,total_tests,new_tests,total_tests_per_thousand,new_tests_per_thousand,new_tests_smoothed,new_tests_smoothed_per_thousand,positive_rate,tests_per_case,tests_units,total_vaccinations,people_vaccinated,people_fully_vaccinated,total_boosters,new_vaccinations,new_vaccinations_smoothed,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,total_boosters_per_hundred,new_vaccinations_smoothed_per_million,new_people_vaccinated_smoothed,new_people_vaccinated_smoothed_per_hundred,stringency_index,population_density,median_age,aged_65_older,aged_70_older,gdp_per_capita,extreme_poverty,cardiovasc_death_rate,diabetes_prevalence,female_smokers,male_smokers,handwashing_facilities,hospital_beds_per_thousand,life_expectancy,human_development_index,population,excess_mortality_cumulative_absolute,excess_mortality_cumulative,excess_mortality,excess_mortality_cumulative_per_million
+AFG,Asia,Afghanistan,2020-01-05,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-04,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-03,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: plot vaccination rates versus dates
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2024-01-16 21:05:49 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:06:05 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-16 21:06:05 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]  # Assuming the vaccination data is in the first dataframe of the list
+
+# Filter the dataframe to include only the relevant columns
+vaccination_df = df[['date', 'total_vaccinations_per_hundred', 'people_vaccinated_per_hundred', 'people_fully_vaccinated_per_hundred']]
+
+# Convert the date column to datetime format
+vaccination_df['date'] = pd.to_datetime(vaccination_df['date'])
+
+# Plot the vaccination rates versus dates
+plt.figure(figsize=(10, 6))
+plt.plot(vaccination_df['date'], vaccination_df['total_vaccinations_per_hundred'], label='Total Vaccinations')
+plt.plot(vaccination_df['date'], vaccination_df['people_vaccinated_per_hundred'], label='People Vaccinated')
+plt.plot(vaccination_df['date'], vaccination_df['people_fully_vaccinated_per_hundred'], label='People Fully Vaccinated')
+plt.xlabel('Date')
+plt.ylabel('Vaccination Rate (%)')
+plt.title('Vaccination Rates Over Time')
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save the plot as a file
+plt.savefig('vaccination_rates.png')
+
+# Declare result var
+result = {
+    "type": "plot",
+    "value": "vaccination_rates.png"
+}
+            ```
+            
+2024-01-16 21:06:05 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:06:05 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:06:05 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:06:05 [INFO] 
+Code running:
+```
+df = dfs[0]
+vaccination_df = df[['date', 'total_vaccinations_per_hundred', 'people_vaccinated_per_hundred', 'people_fully_vaccinated_per_hundred']]
+vaccination_df['date'] = pd.to_datetime(vaccination_df['date'])
+plt.figure(figsize=(10, 6))
+plt.plot(vaccination_df['date'], vaccination_df['total_vaccinations_per_hundred'], label='Total Vaccinations')
+plt.plot(vaccination_df['date'], vaccination_df['people_vaccinated_per_hundred'], label='People Vaccinated')
+plt.plot(vaccination_df['date'], vaccination_df['people_fully_vaccinated_per_hundred'], label='People Fully Vaccinated')
+plt.xlabel('Date')
+plt.ylabel('Vaccination Rate (%)')
+plt.title('Vaccination Rates Over Time')
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:06:06 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:06:06 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:06:06 [INFO] Executed in: 17.529337882995605s
+2024-01-16 21:06:06 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:06:07 [INFO] 127.0.0.1 - - [16/Jan/2024 21:06:07] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:06:07 [INFO] 127.0.0.1 - - [16/Jan/2024 21:06:07] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 21:06:07 [INFO] 127.0.0.1 - - [16/Jan/2024 21:06:07] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 21:08:04 [INFO] Question: plot vaccination rates versus dates
+2024-01-16 21:08:04 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:08:04 [INFO] Prompt ID: dc833677-779c-40b6-ad58-e1ccc3c35c7c
+2024-01-16 21:08:04 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:08:04 [INFO] Using cached response
+2024-01-16 21:08:04 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:08:04 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:08:04 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:08:04 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:08:04 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:08:04 [INFO] 
+Code running:
+```
+df = dfs[0]
+vaccination_df = df[['date', 'total_vaccinations_per_hundred', 'people_vaccinated_per_hundred', 'people_fully_vaccinated_per_hundred']]
+vaccination_df['date'] = pd.to_datetime(vaccination_df['date'])
+plt.figure(figsize=(10, 6))
+plt.plot(vaccination_df['date'], vaccination_df['total_vaccinations_per_hundred'], label='Total Vaccinations')
+plt.plot(vaccination_df['date'], vaccination_df['people_vaccinated_per_hundred'], label='People Vaccinated')
+plt.plot(vaccination_df['date'], vaccination_df['people_fully_vaccinated_per_hundred'], label='People Fully Vaccinated')
+plt.xlabel('Date')
+plt.ylabel('Vaccination Rate (%)')
+plt.title('Vaccination Rates Over Time')
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:08:05 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:08:05 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:08:05 [INFO] Executed in: 0.9694383144378662s
+2024-01-16 21:08:05 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:08:05 [INFO] 127.0.0.1 - - [16/Jan/2024 21:08:05] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:08:05 [INFO] 127.0.0.1 - - [16/Jan/2024 21:08:05] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 21:08:05 [INFO] 127.0.0.1 - - [16/Jan/2024 21:08:05] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 21:10:30 [INFO] Question: plot vaccination rates versus continent
+2024-01-16 21:10:30 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:10:30 [INFO] Prompt ID: eb5926cf-e443-438b-9c7f-f58b855dca6f
+2024-01-16 21:10:31 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:10:31 [INFO] Using cached response
+2024-01-16 21:10:31 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:10:31 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:10:31 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:10:31 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:10:31 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:10:31 [INFO] 
+Code running:
+```
+vaccination_rates = []
+continents = []
+for df in dfs:
+    continent = df['continent'].iloc[0]
+    total_vaccinations = df['total_vaccinations'].max()
+    population = df['population'].iloc[0]
+    vaccination_rate = total_vaccinations / population * 100
+    vaccination_rates.append(vaccination_rate)
+    continents.append(continent)
+df_vaccination_rates = pd.DataFrame({'continent': continents, 'vaccination_rate': vaccination_rates})
+plt.figure(figsize=(10, 6))
+plt.bar(df_vaccination_rates['continent'], df_vaccination_rates['vaccination_rate'])
+plt.xlabel('Continent')
+plt.ylabel('Vaccination Rate (%)')
+plt.title('Vaccination Rates by Continent')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:10:31 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:10:31 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:10:31 [INFO] Executed in: 0.52475905418396s
+2024-01-16 21:10:31 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:10:31 [INFO] 127.0.0.1 - - [16/Jan/2024 21:10:31] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:10:31 [INFO] 127.0.0.1 - - [16/Jan/2024 21:10:31] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 21:10:31 [INFO] 127.0.0.1 - - [16/Jan/2024 21:10:31] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 21:11:33 [INFO] Question: plot earnings versus time
+2024-01-16 21:11:33 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:11:33 [INFO] Prompt ID: b04bd625-88ff-4aa6-8472-23577e811bcc
+2024-01-16 21:11:33 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:11:33 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:11:33 [INFO] Using prompt: <dataframe>
+dfs[0]:323766x67
+iso_code,continent,location,date,total_cases,new_cases,new_cases_smoothed,total_deaths,new_deaths,new_deaths_smoothed,total_cases_per_million,new_cases_per_million,new_cases_smoothed_per_million,total_deaths_per_million,new_deaths_per_million,new_deaths_smoothed_per_million,reproduction_rate,icu_patients,icu_patients_per_million,hosp_patients,hosp_patients_per_million,weekly_icu_admissions,weekly_icu_admissions_per_million,weekly_hosp_admissions,weekly_hosp_admissions_per_million,total_tests,new_tests,total_tests_per_thousand,new_tests_per_thousand,new_tests_smoothed,new_tests_smoothed_per_thousand,positive_rate,tests_per_case,tests_units,total_vaccinations,people_vaccinated,people_fully_vaccinated,total_boosters,new_vaccinations,new_vaccinations_smoothed,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,total_boosters_per_hundred,new_vaccinations_smoothed_per_million,new_people_vaccinated_smoothed,new_people_vaccinated_smoothed_per_hundred,stringency_index,population_density,median_age,aged_65_older,aged_70_older,gdp_per_capita,extreme_poverty,cardiovasc_death_rate,diabetes_prevalence,female_smokers,male_smokers,handwashing_facilities,hospital_beds_per_thousand,life_expectancy,human_development_index,population,excess_mortality_cumulative_absolute,excess_mortality_cumulative,excess_mortality,excess_mortality_cumulative_per_million
+AFG,Asia,Afghanistan,2020-01-03,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-04,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-05,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: plot earnings versus time
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2024-01-16 21:11:33 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:11:40 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-16 21:11:40 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]  # Assuming the dataframe with earnings and time is the first dataframe in the list
+
+# Plot earnings versus time
+plt.plot(df['date'], df['total_cases'])
+plt.xlabel('Date')
+plt.ylabel('Total Cases')
+plt.title('Total Cases over Time')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save the plot as an image file
+plt.savefig('total_cases_vs_time.png')
+
+# Declare result var
+result = {
+    "type": "plot",
+    "value": "total_cases_vs_time.png"
+}
+            ```
+            
+2024-01-16 21:11:40 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:11:40 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:11:40 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:11:40 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.plot(df['date'], df['total_cases'])
+plt.xlabel('Date')
+plt.ylabel('Total Cases')
+plt.title('Total Cases over Time')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:11:40 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-01-16 21:11:40 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-01-16 21:11:42 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:11:42 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:11:42 [INFO] Executed in: 9.177307844161987s
+2024-01-16 21:11:42 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:11:42 [INFO] 127.0.0.1 - - [16/Jan/2024 21:11:42] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:11:42 [INFO] 127.0.0.1 - - [16/Jan/2024 21:11:42] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 21:11:42 [INFO] 127.0.0.1 - - [16/Jan/2024 21:11:42] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 21:16:45 [INFO] Question: plot vaccination vs time
+2024-01-16 21:16:46 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:16:46 [INFO] Prompt ID: 3518b8e5-51fa-433f-ace6-9004f115ad67
+2024-01-16 21:16:46 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:16:46 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:16:46 [INFO] Using prompt: <dataframe>
+dfs[0]:323766x67
+iso_code,continent,location,date,total_cases,new_cases,new_cases_smoothed,total_deaths,new_deaths,new_deaths_smoothed,total_cases_per_million,new_cases_per_million,new_cases_smoothed_per_million,total_deaths_per_million,new_deaths_per_million,new_deaths_smoothed_per_million,reproduction_rate,icu_patients,icu_patients_per_million,hosp_patients,hosp_patients_per_million,weekly_icu_admissions,weekly_icu_admissions_per_million,weekly_hosp_admissions,weekly_hosp_admissions_per_million,total_tests,new_tests,total_tests_per_thousand,new_tests_per_thousand,new_tests_smoothed,new_tests_smoothed_per_thousand,positive_rate,tests_per_case,tests_units,total_vaccinations,people_vaccinated,people_fully_vaccinated,total_boosters,new_vaccinations,new_vaccinations_smoothed,total_vaccinations_per_hundred,people_vaccinated_per_hundred,people_fully_vaccinated_per_hundred,total_boosters_per_hundred,new_vaccinations_smoothed_per_million,new_people_vaccinated_smoothed,new_people_vaccinated_smoothed_per_hundred,stringency_index,population_density,median_age,aged_65_older,aged_70_older,gdp_per_capita,extreme_poverty,cardiovasc_death_rate,diabetes_prevalence,female_smokers,male_smokers,handwashing_facilities,hospital_beds_per_thousand,life_expectancy,human_development_index,population,excess_mortality_cumulative_absolute,excess_mortality_cumulative,excess_mortality,excess_mortality_cumulative_per_million
+AFG,Asia,Afghanistan,2020-01-04,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-03,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+AFG,Asia,Afghanistan,2020-01-05,,0.0,,,0.0,,,0.0,,,0.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.0,54.422,18.6,2.581,1.337,1803.987,,597.029,9.59,,,37.746,0.5,64.83,0.511,41128772.0,,,,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+```
+
+Q: plot vaccination vs time
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+
+Generate python code and return full updated code:
+2024-01-16 21:16:46 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:17:02 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-01-16 21:17:02 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]  # Assuming the vaccination data is in the first dataframe
+
+# Filter the data for relevant columns
+vaccination_data = df[['date', 'total_vaccinations']]
+
+# Convert date column to datetime format
+vaccination_data['date'] = pd.to_datetime(vaccination_data['date'])
+
+# Plot the vaccination data
+plt.plot(vaccination_data['date'], vaccination_data['total_vaccinations'])
+plt.xlabel('Date')
+plt.ylabel('Total Vaccinations')
+plt.title('Vaccination Progress Over Time')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save the plot as an image file
+plt.savefig('vaccination_plot.png')
+
+# Declare result var
+result = {
+    "type": "plot",
+    "value": "vaccination_plot.png"
+}
+            ```
+            
+2024-01-16 21:17:02 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:17:02 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:17:02 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:17:02 [INFO] 
+Code running:
+```
+df = dfs[0]
+vaccination_data = df[['date', 'total_vaccinations']]
+vaccination_data['date'] = pd.to_datetime(vaccination_data['date'])
+plt.plot(vaccination_data['date'], vaccination_data['total_vaccinations'])
+plt.xlabel('Date')
+plt.ylabel('Total Vaccinations')
+plt.title('Vaccination Progress Over Time')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:17:02 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:17:02 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:17:02 [INFO] Executed in: 17.021099090576172s
+2024-01-16 21:17:02 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:17:03 [INFO] 127.0.0.1 - - [16/Jan/2024 21:17:03] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:17:03 [INFO] 127.0.0.1 - - [16/Jan/2024 21:17:03] "[36mGET /exports/style.css HTTP/1.1[0m" 304 -
+2024-01-16 21:17:03 [INFO] 127.0.0.1 - - [16/Jan/2024 21:17:03] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 21:17:46 [INFO] Question: plot vaccination vs time
+2024-01-16 21:17:46 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:17:46 [INFO] Prompt ID: 4e8ed62e-e433-453c-ba25-1d02e951924b
+2024-01-16 21:17:46 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:17:46 [INFO] Using cached response
+2024-01-16 21:17:46 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:17:46 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:17:46 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:17:46 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:17:46 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:17:46 [INFO] 
+Code running:
+```
+df = dfs[0]
+vaccination_data = df[['date', 'total_vaccinations']]
+vaccination_data['date'] = pd.to_datetime(vaccination_data['date'])
+plt.plot(vaccination_data['date'], vaccination_data['total_vaccinations'])
+plt.xlabel('Date')
+plt.ylabel('Total Vaccinations')
+plt.title('Vaccination Progress Over Time')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:17:47 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:17:47 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:17:47 [INFO] Executed in: 0.6043369770050049s
+2024-01-16 21:17:47 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:17:47 [INFO] 127.0.0.1 - - [16/Jan/2024 21:17:47] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:17:47 [INFO] 127.0.0.1 - - [16/Jan/2024 21:17:47] "GET /exports/style.css HTTP/1.1" 200 -
+2024-01-16 21:17:47 [INFO] 127.0.0.1 - - [16/Jan/2024 21:17:47] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -
+2024-01-16 21:18:37 [INFO] Question: plot vaccination vs time
+2024-01-16 21:18:37 [INFO] Running PandasAI with openai LLM...
+2024-01-16 21:18:37 [INFO] Prompt ID: b6b6f4a2-24e7-4d1f-acaf-73ab8e50d0b2
+2024-01-16 21:18:37 [INFO] Executing Step 0: CacheLookup
+2024-01-16 21:18:37 [INFO] Using cached response
+2024-01-16 21:18:37 [INFO] Executing Step 1: PromptGeneration
+2024-01-16 21:18:37 [INFO] Executing Step 2: CodeGenerator
+2024-01-16 21:18:37 [INFO] Executing Step 3: CachePopulation
+2024-01-16 21:18:37 [INFO] Executing Step 4: CodeExecution
+2024-01-16 21:18:37 [INFO] Saving charts to /Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png
+2024-01-16 21:18:37 [INFO] 
+Code running:
+```
+df = dfs[0]
+vaccination_data = df[['date', 'total_vaccinations']]
+vaccination_data['date'] = pd.to_datetime(vaccination_data['date'])
+plt.plot(vaccination_data['date'], vaccination_data['total_vaccinations'])
+plt.xlabel('Date')
+plt.ylabel('Total Vaccinations')
+plt.title('Vaccination Progress Over Time')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+        ```
+2024-01-16 21:18:38 [INFO] Executing Step 5: ResultValidation
+2024-01-16 21:18:38 [INFO] Answer: {'type': 'plot', 'value': '/Users/devam/PycharmProjects/DataScribe/exports/charts/temp_chart.png'}
+2024-01-16 21:18:38 [INFO] Executed in: 0.5756280422210693s
+2024-01-16 21:18:38 [INFO] Executing Step 6: ResultParsing
+2024-01-16 21:18:38 [INFO] 127.0.0.1 - - [16/Jan/2024 21:18:38] "POST /graphgen HTTP/1.1" 200 -
+2024-01-16 21:18:38 [INFO] 127.0.0.1 - - [16/Jan/2024 21:18:38] "GET /exports/style.css HTTP/1.1" 200 -
+2024-01-16 21:18:38 [INFO] 127.0.0.1 - - [16/Jan/2024 21:18:38] "GET /exports/charts/temp_chart.png HTTP/1.1" 200 -

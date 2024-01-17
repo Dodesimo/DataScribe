@@ -252,3 +252,8 @@ border-radius: 0 0 15px 15px !important;
   width: 300px;
   height: 100px;
 }
+
+.graph {
+
+	margin:15px;
+}
