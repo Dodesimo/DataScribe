@@ -36,6 +36,12 @@ def graphgen():
         return render_template("graphgensuccess.html", path=filePath)
     else:
         return render_template("graphgen.html")
+@app.route("/csvsum", methods=["GET", "POST"])
+def csvsum():
+    if request.method =="POST":
+        return render_template("csvsum.html")
+    else:
+        return render_template("csvsum.html")
 
 if __name__ == "__main__":
     app.run()
