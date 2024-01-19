@@ -6,8 +6,36 @@
   <component name="ChangeListManager">
     <list default="true" id="a4d4193a-56c3-40b8-a7d6-1bfb1b242687" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/_version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/archive.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/archive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/asyn.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/asyn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/caching.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/caching.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/generic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/cached.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/cached.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/http.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/libarchive.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/libarchive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/local.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/reference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/sftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/sftp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/smb.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/smb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/tar.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/tar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/webhdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/webhdfs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/zip.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/registry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/spec.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/spec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/tests/abstract/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/tests/abstract/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +48,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
