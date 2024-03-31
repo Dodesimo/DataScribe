@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d4193a-56c3-40b8-a7d6-1bfb1b242687" name="Changes" comment="">
+    <list default="true" id="a4d4193a-56c3-40b8-a7d6-1bfb1b242687" name="Changes" comment="almost done, need to format">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/cache_db_0.9.db" beforeDir="false" afterPath="$PROJECT_DIR$/cache/cache_db_0.9.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/cache_db_0.9.db.wal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/charts/temp_chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/exports/charts/temp_chart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/exports/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pandasai.log" beforeDir="false" afterPath="$PROJECT_DIR$/pandasai.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/graphgen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/graphgen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/graphgensuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/graphgensuccess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/csvsumsuccess.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/csvsumsuccess.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jupyter Notebook" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -44,6 +38,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -51,6 +46,9 @@
     &quot;assignee&quot;: &quot;Dodesimo&quot;
   }
 }</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="fbdba91a6bd8a03a3cd4bcb19db0dcd7ebc83821" />
+  </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -71,22 +69,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "graphgen",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;csvsum&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/exports" />
@@ -133,6 +131,10 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Flask server.DataScribe" />
+      <item itemvalue="Python.app" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.app" />
@@ -160,6 +162,55 @@
       <workItem from="1705272151905" duration="12772000" />
       <workItem from="1705367233116" duration="13951000" />
     </task>
+    <task id="LOCAL-00001" summary="created csv sum tool">
+      <option name="closed" value="true" />
+      <created>1711856478574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711856478574</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created csv sum generator">
+      <option name="closed" value="true" />
+      <created>1711856810171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711856810171</updated>
+    </task>
+    <task id="LOCAL-00003" summary="created csv sum generator webpage">
+      <option name="closed" value="true" />
+      <created>1711857108169</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711857108169</updated>
+    </task>
+    <task id="LOCAL-00004" summary="created csv sum generator webpage">
+      <option name="closed" value="true" />
+      <created>1711857118624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711857118624</updated>
+    </task>
+    <task id="LOCAL-00005" summary="csv sum arch set up">
+      <option name="closed" value="true" />
+      <created>1711857905692</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711857905692</updated>
+    </task>
+    <task id="LOCAL-00006" summary="almost done, need to format">
+      <option name="closed" value="true" />
+      <created>1711859561273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711859561273</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,8 +239,17 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created csv sum tool" />
+    <MESSAGE value="created csv sum generator" />
+    <MESSAGE value="created csv sum generator webpage" />
+    <MESSAGE value="csv sum arch set up" />
+    <MESSAGE value="almost done, need to format" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost done, need to format" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DataScribe$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1705697114999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/DataScribe$app.coverage" NAME="app Coverage Results" MODIFIED="1703791733008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DataScribe$DataScribe.coverage" NAME="DataScribe Coverage Results" MODIFIED="1705458135751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataScribe$DataScribe.coverage" NAME="DataScribe Coverage Results" MODIFIED="1711859966202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
