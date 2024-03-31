@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4d4193a-56c3-40b8-a7d6-1bfb1b242687" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec-2023.12.2.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/_version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/archive.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/archive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/asyn.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/asyn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/caching.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/caching.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/generic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/cached.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/cached.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/http.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/libarchive.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/libarchive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/memory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/reference.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/reference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/sftp.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/sftp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/smb.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/smb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/tar.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/tar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/webhdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/webhdfs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/implementations/zip.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/registry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/spec.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/spec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/tests/abstract/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/tests/abstract/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/transaction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.10/site-packages/fsspec/utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="a4d4193a-56c3-40b8-a7d6-1bfb1b242687" name="Changes" comment="created csv sum generator" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -67,6 +35,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -74,6 +43,9 @@
     &quot;assignee&quot;: &quot;Dodesimo&quot;
   }
 }</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="fbdba91a6bd8a03a3cd4bcb19db0dcd7ebc83821" />
+  </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -187,6 +159,23 @@
       <workItem from="1705272151905" duration="12772000" />
       <workItem from="1705367233116" duration="13951000" />
     </task>
+    <task id="LOCAL-00001" summary="created csv sum tool">
+      <option name="closed" value="true" />
+      <created>1711856478574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711856478574</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created csv sum generator">
+      <option name="closed" value="true" />
+      <created>1711856810171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711856810171</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,8 +204,14 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created csv sum tool" />
+    <MESSAGE value="created csv sum generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="created csv sum generator" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DataScribe$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1705697114999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/DataScribe$app.coverage" NAME="app Coverage Results" MODIFIED="1703791733008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DataScribe$DataScribe.coverage" NAME="DataScribe Coverage Results" MODIFIED="1705619015090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataScribe$DataScribe.coverage" NAME="DataScribe Coverage Results" MODIFIED="1711856460949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

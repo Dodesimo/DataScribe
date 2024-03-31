@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from langchain_helper import answer
 from pandasai_helper import generateGraph, getImagePath
+from broadinsights_generator import insight
 
 app = Flask(__name__, static_folder='exports')
 count = 0
@@ -39,7 +40,9 @@ def graphgen():
 @app.route("/csvsum", methods=["GET", "POST"])
 def csvsum():
     if request.method =="POST":
-        return render_template("csvsum.html")
+        link = request.form.get("datasetLink")
+        insight(link)
+        return render_template()
     else:
         return render_template("csvsum.html")
 
