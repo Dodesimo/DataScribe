@@ -47,7 +47,7 @@
     <h1 class="homehead">CSVSum</h1>
 <p></p>
     <h4 class="homesub"><i>Get broad insights for a CSV dataset through one sentence.</i></h4>
-    <form action="{{ url_for('graphgen')}}" method="post">
+    <form action="{{ url_for('csvsum')}}" method="post">
             <label for="text-field" class="formclass">What is the link to your dataset?</label><br>
         <textarea id="text-field" name="datasetLink" required class="formclass input-box" style="color: black; text-align-all: left"></textarea>
             <p></p>
@@ -57,7 +57,7 @@
     <p></p>
     <h1 class="homehead">Insight:</h1>
     <p></p>
-    <p>{{ broadinsight }}</p>
+    <p class>{{ broadinsight }}</p>
 
 
 {% endblock %}
