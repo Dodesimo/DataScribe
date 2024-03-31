@@ -40,9 +40,9 @@ def graphgen():
 @app.route("/csvsum", methods=["GET", "POST"])
 def csvsum():
     if request.method =="POST":
-        link = request.form.get("datasetLink")
-        insight(link)
-        return render_template()
+        #link = request.form.get("datasetLink")
+        #broadinsight = insight(link)
+        return render_template("csvsumsuccess.html", broadinsight=insight)
     else:
         return render_template("csvsum.html")
 
