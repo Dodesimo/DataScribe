@@ -33,6 +33,6 @@ def insight(dset):
         handle_parsing_errors=True
     )
 
-    query = "Please provide broad insights for this dataset, including key statistical information as well as important information about the features."
+    query = "Please provide broad insights and trends for this dataset, including key statistical information as well as important information about the features. Be thorough."
     return agent.run(query)
 
